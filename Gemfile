@@ -9,8 +9,14 @@ gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 gem 'haml'
 gem 'haml-rails'
+gem 'rename'
 
 group :development, :test do
+  gem 'rubocop'
+  gem 'pry'
+  gem 'pry-doc'
+  gem 'pry-rails'
+  gem 'spring-commands-rspec'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 4.0.2'
   gem 'shoulda-matchers', '~> 4.0'
