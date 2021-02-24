@@ -6,6 +6,7 @@ class CreateSubscriptions < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+    add_index :subscriptions, :email, unique: true
     add_index :subscriptions, :unsub_token, unique: true
   end
 end
