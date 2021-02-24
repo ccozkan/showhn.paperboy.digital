@@ -66,12 +66,24 @@ GEM
     crass (1.0.6)
     diff-lcs (1.4.4)
     erubi (1.10.0)
+    erubis (2.7.0)
     ffi (1.14.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     haml (5.2.1)
       temple (>= 0.8.0)
       tilt
+    haml-rails (2.0.1)
+      actionpack (>= 5.1)
+      activesupport (>= 5.1)
+      haml (>= 4.0.6, < 6.0)
+      html2haml (>= 1.0.1)
+      railties (>= 5.1)
+    html2haml (2.2.0)
+      erubis (~> 2.7.0)
+      haml (>= 4.0, < 6)
+      nokogiri (>= 1.6.0)
+      ruby_parser (~> 3.5)
     i18n (1.8.9)
       concurrent-ruby (~> 1.0)
     listen (3.4.1)
@@ -147,6 +159,8 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.2)
+    ruby_parser (3.15.1)
+      sexp_processor (~> 4.9)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -157,6 +171,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    sexp_processor (4.15.2)
     shoulda-matchers (4.5.1)
       activesupport (>= 4.2.0)
     sprockets (4.0.2)
@@ -182,6 +197,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   haml
+  haml-rails
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
