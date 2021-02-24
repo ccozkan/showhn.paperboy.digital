@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyCoolNewsletterProject</title>
+    <title>My Cool Automated Newsletter Project</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,11 +10,11 @@
   </head>
 
   <body>
-      <% flash.each do |type, msg| %>
-          <div class="alert alert-info">
-              <%= msg %>
-          </div>
-      <% end %>
+    <% flash.each do |type, msg| %>
+       <div class="alert alert-info">
+            <%= msg %>
+        </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
