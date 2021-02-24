@@ -10,20 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_210_224_110_618) do
+ActiveRecord::Schema.define(version: 2021_02_24_110618) do
+
   # These are extensions that must be enabled in order to support this database
-  enable_extension 'plpgsql'
+  enable_extension "plpgsql"
 
-  create_table 'data', force: :cascade do |t|
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
+  create_table "data", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table 'subscriptions', force: :cascade do |t|
-    t.string 'email'
-    t.string 'unsub_token'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
-    t.index ['unsub_token'], name: 'index_subscriptions_on_unsub_token', unique: true
+  create_table "subscriptions", force: :cascade do |t|
+    t.string "email"
+    t.string "unsub_token"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_subscriptions_on_email", unique: true
+    t.index ["unsub_token"], name: "index_subscriptions_on_unsub_token", unique: true
   end
+
 end
