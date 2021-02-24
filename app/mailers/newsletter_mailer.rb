@@ -1,0 +1,11 @@
+class NewsletterMailer < ApplicationMailer
+  def welcome_email(subscription)
+    @subscription = subscription
+    mail(to: @subscription.email, subject: 'Welcome to My Awesome Site')
+  end
+
+  def newsletter_email(subscription)
+    @subscription = subscription
+    mail(to: @subscription.email, subject: 'Your weekly digest')
+  end
+end
