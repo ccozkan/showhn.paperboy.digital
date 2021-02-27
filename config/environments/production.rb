@@ -100,4 +100,20 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = {
+    host: 'test.zavodx.com',
+    protocol: 'https'
+  }
+
+  config.action_mailer.smtp_settings = {
+    address: Rails.application.credentials.dig(:aws, :ses_server),
+    port: 587,
+    user_name: Rails.application.credentials.dig(:aws, :ses_username),
+    password: Rails.application.credentials.dig(:aws, :ses_password),
+    authentication: :login,
+    enable_starttls_auto: true
+  }
 end
