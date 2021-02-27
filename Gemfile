@@ -9,6 +9,7 @@ gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 gem 'haml'
 gem 'haml-rails'
+gem 'httparty', require: false
 
 group :development, :test do
   gem 'rubocop'
