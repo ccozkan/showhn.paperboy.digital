@@ -1,10 +1,10 @@
 class SubscriptionsController < ApplicationController
   def create
     @subscription = Subscription.new(subscription_params)
-    if @subscription.save!
+    if @subscription.save
       redirect_to root_path, notice: 'You have successfully subscribed!'
     else
-      redirect_to root_path, alert: 'Hmm weird, some error happened!'
+      redirect_to root_path, alert: @subscription.errors.full_messages.first
     end
   end
 
