@@ -10,16 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_24_110618) do
+ActiveRecord::Schema.define(version: 2021_03_01_203934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "data", force: :cascade do |t|
+  create_table "hacker_news_posts", force: :cascade do |t|
+    t.string "external_id"
+    t.string "url"
+    t.text "text"
     t.string "title"
-    t.text "body"
+    t.datetime "posted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["external_id"], name: "index_hacker_news_posts_on_external_id", unique: true
   end
 
   create_table "subscriptions", force: :cascade do |t|
