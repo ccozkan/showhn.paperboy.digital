@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: my_cool_automated_newsletter_project_development
+  database: job_hunter_dev_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: my_cool_automated_newsletter_project
+  #username: job_hunter_dev
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: my_cool_automated_newsletter_project_test
+  database: job_hunter_dev_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: my_cool_automated_newsletter_project_production
-  username: my_cool_automated_newsletter_project
-  password: <%= ENV['MY_COOL_AUTOMATED_NEWSLETTER_PROJECT_DATABASE_PASSWORD'] %>
+  database: job_hunter_dev_production
+  username: job_hunter_dev
+  password: <%= ENV['JOB_HUNTER_DEV_DATABASE_PASSWORD'] %>
