@@ -4,8 +4,9 @@ class NewsletterMailer < ApplicationMailer
     mail(to: @subscription.email, subject: 'Welcome to My Awesome Site')
   end
 
-  def newsletter_email(subscription)
+  def newsletter_email(subscription, posts)
     @subscription = subscription
+    @posts = posts
     mail(to: @subscription.email, subject: 'Your weekly digest')
   end
 end
