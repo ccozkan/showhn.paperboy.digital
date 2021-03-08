@@ -7,7 +7,7 @@ module PostReceiverServices
       end
 
       def call
-        url = 'https://hacker-news.firebaseio.com/v0/jobstories.json?print=pretty'
+        url = 'https://hacker-news.firebaseio.com/v0/showstories.json?print=pretty'
         result = HTTParty.get(url)
       rescue HTTParty::Error => e
         OpenStruct.new({ success?: false, error: e })

@@ -15,6 +15,7 @@ class PostReceiverJob < ApplicationJob
         url = post_detail.fetch('url', nil)
         text = post_detail.fetch('text', nil)
         title = post_detail.fetch('title', nil)
+        title = title.sub!('Show HN: ')
         posted_at = DateTime.strptime(post_detail['time'].to_s, '%s')
 
         HackerNewsPost.create!(url: url, text: text, title: title,
