@@ -20,5 +20,6 @@ class PostReceiverWorker
       posted_at = DateTime.strptime(post_detail['time'].to_s, '%s')
 
       HackerNewsPost.create!(url: url, title: title, posted_at: posted_at, external_id: post_detail['id'], score: score)
+    end
   end
 end
