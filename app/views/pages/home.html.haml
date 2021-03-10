@@ -1,8 +1,23 @@
-%section.container
-  %h1 My Cool Newsletter Project
+%head
+  %link{:href => "https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css", :rel => "stylesheet"}/
 
-  %form{action: subscriptions_path, method: "POST"}
-    %input.form-control{name: "email", placeholder: 'your email', required: true, type: "text"}/
-    = hidden_field_tag :authenticity_token, form_authenticity_token
-    = submit_tag 'subscribe', class: 'submit_button'
+%body
+  .text-center
+    %h2 newsletter for "show HackerNews"
+    = image_tag("paperboy_700.png", size: '300x300', class:"mb-4")
+    %p delivered weekly by paperboy.digital
+
+    %form{action: subscriptions_path, method: "POST"}
+      %input.form-control{name: "email", placeholder: 'your email', required: true, type: "text"}/
+      = hidden_field_tag :authenticity_token, form_authenticity_token
+
+      = submit_tag 'subscribe', class: 'submit_button'
+
+    %p.mt-5.mb-3.text-muted
+      = link_to 'source code', 'https://github.com/ccozkan/showhn.paperboy.digital'
+      |
+      = link_to 'author', 'https://ozkan.cc'
+
+      %br/
+      © 2021
 
