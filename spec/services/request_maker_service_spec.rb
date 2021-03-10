@@ -6,7 +6,6 @@ RSpec.describe RequestMakerService, type: :service do
     let(:response) { RequestMakerService.new(url).call }
 
     context 'when success' do
-
       it do
         expect(response.success?).to eq true
         expect(response.payload).not_to eq nil
