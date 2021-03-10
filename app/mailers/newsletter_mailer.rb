@@ -7,6 +7,6 @@ class NewsletterMailer < ApplicationMailer
   def newsletter_email(subscription, posts)
     @subscription = subscription
     @posts = posts
-    mail(to: @subscription.email, subject: 'Your weekly digest')
+    mail(to: @subscription.email, subject: 'Last Week On Show HN!')
   end
 end
