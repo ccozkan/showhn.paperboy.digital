@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   root 'pages#home'
   resources :subscriptions, only: [:create]
   get 'unsubscribe/:token', controller: 'unsubscriptions', action: 'show', as: 'unsubscription'
+  get '/check.txt', to: proc { [200, {}, ['it_works']] }
 end
