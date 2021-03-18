@@ -1,9 +1,11 @@
 newsletter_sender_job:
   cron: "0 16 * * FRI"
   class: "NewsletterSenderWorker"
-  queue: newsletter_sender
 
 post_receiver_job:
   cron: "0 * * * *"
   class: "PostReceiverWorker"
-  queue: post_receiver
+
+hello_world_job:
+  cron: "* * * * *"
+  class: "HelloWorldWorker"
