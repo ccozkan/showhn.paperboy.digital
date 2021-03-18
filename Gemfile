@@ -12,6 +12,7 @@ gem 'sidekiq'
 gem 'sidekiq-cron'
 gem 'haml-rails'
 gem 'httparty', require: false
+gem "honeybadger", "~> 4.0"
 
 group :development, :test do
   gem 'rubocop'
