@@ -5,7 +5,3 @@ newsletter_sender_job:
 post_receiver_job:
   cron: "0 * * * *"
   class: "PostReceiverWorker"
-
-hello_world_job:
-  cron: "* * * * *"
-  class: "HelloWorldWorker"
