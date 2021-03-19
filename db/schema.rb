@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_08_212410) do
+ActiveRecord::Schema.define(version: 2021_03_19_223005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,9 @@ ActiveRecord::Schema.define(version: 2021_03_08_212410) do
     t.string "unsub_token"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "confirm_token"
+    t.datetime "confirmed_at"
+    t.index ["confirm_token"], name: "index_subscriptions_on_confirm_token", unique: true
     t.index ["email"], name: "index_subscriptions_on_email", unique: true
     t.index ["unsub_token"], name: "index_subscriptions_on_unsub_token", unique: true
   end
