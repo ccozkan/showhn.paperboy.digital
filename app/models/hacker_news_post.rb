@@ -3,7 +3,7 @@ class HackerNewsPost < ApplicationRecord
   validates_uniqueness_of :external_id
 
   def self.score_ordered_posts_of_last_week
-    where('posted_at >= ?', 1.week.ago).order(score: :desc)
+    where('posted_at >= ?', 1.week.ago).order(score: :desc).to_a
   end
 
   def self.api_url_for_item_details(item_id)
