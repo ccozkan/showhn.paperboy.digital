@@ -2,9 +2,6 @@ require "rails_helper"
 
 
 RSpec.describe NewsletterMailer, type: :mailer do
-  before { ActiveJob::Base.queue_adapter = :test }
-  after { ActiveJob::Base.queue_adapter = :inline }
-
   let(:subscription) { create(:subscription) }
 
   describe '#welcome' do
