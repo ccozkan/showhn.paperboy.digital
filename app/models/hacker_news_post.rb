@@ -13,4 +13,14 @@ class HackerNewsPost < ApplicationRecord
   def self.api_url_for_show_stories
     'https://hacker-news.firebaseio.com/v0/showstories.json'
   end
+
+  def self.format_post_detail(post_detail)
+    url = post_detail['url']
+    score = post_detail['score']
+    title = post_detail['title'].sub('Show HN: ', '')
+    posted_at = DateTime.strptime(post_detail['time'].to_s, '%s')
+    external_id = post_detail['id']
+
+    { url: url, score: score, title: title, posted_at: posted_at, external_id: external_id }
+  end
 end

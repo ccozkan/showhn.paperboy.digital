@@ -20,12 +20,8 @@ class PostReceiverWorker
       post_detail = post_detail.payload.parsed_response
       next if HackerNewsPost.find_by(external_id: post_detail['id']).present?
 
-      url = post_detail['url']
-      score = post_detail['score']
-      title = post_detail['title'].sub('Show HN: ', '')
-      posted_at = DateTime.strptime(post_detail['time'].to_s, '%s')
-
-      HackerNewsPost.create!(url: url, title: title, posted_at: posted_at, external_id: post_detail['id'], score: score)
+      params = HackerNewsPost.format_post_detail(post_detail)
+      HackerNewsPost.create!(params)
     end
   end
 end
