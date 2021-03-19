@@ -15,11 +15,11 @@ class HackerNewsPost < ApplicationRecord
   end
 
   def self.format_post_detail(post_detail)
-    url = post_detail['url']
-    score = post_detail['score']
-    title = post_detail['title'].sub('Show HN: ', '')
-    posted_at = DateTime.strptime(post_detail['time'].to_s, '%s')
     external_id = post_detail['id']
+    score = post_detail['score'] || 0
+    title = post_detail['title'].sub('Show HN: ', '')
+    url = post_detail['url'] || "https://news.ycombinator.com/item?id=#{external_id}"
+    posted_at = DateTime.strptime(post_detail['time'].to_s, '%s')
 
     { url: url, score: score, title: title, posted_at: posted_at, external_id: external_id }
   end
