@@ -2,16 +2,16 @@ require 'rails_helper'
 
 RSpec.describe 'Unsubscriptions', type: :request do
   describe 'unsubscribing user' do
-    before do
-      @subscription = Subscription.new(email: 'foo@bar.com')
-      @subscription.save!
-    end
+    let(:subscription) { create(:subscription)}
+    before { get '/unsubscribe/' + subscription.unsub_token }
 
-    it 'get redirects' do
-      get '/unsubscribe/' + @subscription.unsub_token
+    it 'get redirected' do
       expect(response).to have_http_status(:redirect)
       expect(response).to redirect_to(root_path)
-      expect(Subscription.find_by(email: 'foo@bar.com')).to eq nil
+    end
+
+    it 'deletes its subscription' do
+      expect(Subscription.find_by(email: subscription.email)).to eq nil
     end
   end
 end
