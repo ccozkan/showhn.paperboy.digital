@@ -1,0 +1,15 @@
+# README
+
+* showhn.paperboy.digital
+
+This web-app sends weekly newsletter of projects on [[https://news.ycombinator.com/show][Show HackerNews]]. 
+
+** technologies used
+   + ruby 2.7.2 with rails 6.1.3
+   + postgresql and redis for databases
+   + sidekiq for background jobs
+   + haml for views
+   + rspec for testing
+   + aws ses, for smtp server
+   + runs on dokku, deployed on digitalocean
+   + uses honeybadger for error monitoring
