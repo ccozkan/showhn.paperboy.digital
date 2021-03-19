@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'noreply@test.zavodx.com'
+  default from: 'no-reply@showhn.paperboy.digital'
   layout 'mailer'
 end
 
