@@ -7,24 +7,13 @@ RSpec.describe HackerNewsPost, type: :model do
   end
 
   describe '.score_ordered_posts_of_last_week' do
-    let!(:most_popular_post) { HackerNewsPost.create(external_id: 'abc',
-                                                     score: 100,
-                                                     posted_at: Date.today - 2.days) }
-    let!(:less_popular_post) { HackerNewsPost.create(external_id: 'xyz',
-                                                     score: 50,
-                                                     posted_at: Date.today - 1.day) }
+    let!(:most_popular_post) { create(:hacker_news_post, score: 100, posted_at: Date.today - 2.days) }
+    let!(:less_popular_post) { create(:hacker_news_post, score: 10, posted_at: Date.today - 1.days) }
+    let!(:last_weeks_popular_post) { create(:hacker_news_post, score: 10, posted_at: Date.today.last_week - 1.day) }
 
-    let!(:last_weeks_popular_post) { HackerNewsPost.create(external_id: 'ijk',
-                                                           score: 500,
-                                                           posted_at: Date.today - 7.days) }
     let!(:subject) { HackerNewsPost.score_ordered_posts_of_last_week}
 
-    it do
-      expect(subject).to eq [most_popular_post, less_popular_post]
-    end
-
-    it do
-      expect(subject.is_a? Array).to be true
-    end
+    it { expect(subject).to eq [most_popular_post, less_popular_post] }
+    it { expect(subject.is_a? Array).to be true }
   end
 end
