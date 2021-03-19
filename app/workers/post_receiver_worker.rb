@@ -4,6 +4,7 @@ class PostReceiverWorker
   def perform(*args)
     api_url = HackerNewsPost.api_url_for_show_stories
     posts = RequestMakerService.new(api_url).call
+
     unless posts.success?
       Honeybadger.notify(posts.errors)
       return
@@ -12,7 +13,8 @@ class PostReceiverWorker
     posts.payload.each do |item_id|
       api_url = HackerNewsPost.api_url_for_item_details(item_id)
       post_detail = RequestMakerService.new(api_url).call
-      unless posts.success?
+
+      unless post_detail.success?
         Honeybadger.notify(post_details.errors)
         next
       end
