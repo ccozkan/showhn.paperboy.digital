@@ -1,6 +1,5 @@
 require "rails_helper"
 
-
 RSpec.describe NewsletterMailer, type: :mailer do
   let(:subscription) { create(:subscription) }
 
@@ -28,7 +27,7 @@ RSpec.describe NewsletterMailer, type: :mailer do
 
     context 'enqueued job is added' do
       it do
-        expect { subscription.send_newsletter_email([post]) }.to have_enqueued_job(ActionMailer::MailDeliveryJob).with('NewsletterMailer', 'newsletter', 'deliver_now', { args: [subscription, [post]] })
+        expect { subscription.send_newsletter_email(posts) }.to have_enqueued_job(ActionMailer::MailDeliveryJob).with('NewsletterMailer', 'newsletter', 'deliver_now', { args: [subscription, posts] })
       end
     end
 
