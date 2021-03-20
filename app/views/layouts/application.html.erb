@@ -7,7 +7,8 @@
     <%= csp_meta_tag %>
     <%= favicon_link_tag asset_path('paperboy_30.png') %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.5.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7MZXKTSXE"></script>
@@ -20,9 +21,9 @@
     </script>
   </head>
 
-  <body>
+  <body style="background-color: #F3DFC1">
     <% flash.each do |type, msg| %>
-       <div class="alert alert-info">
+       <div class="alert alert-info page-wrap">
             <%= msg %>
         </div>
     <% end %>

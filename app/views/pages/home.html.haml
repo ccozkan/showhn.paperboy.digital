@@ -1,15 +1,14 @@
-%head
-  %link{:href => "https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css", :rel => "stylesheet"}/
-
 %body
-  .text-center
+  .page-wrap
     %h2 newsletter for "show HackerNews"
     %br/
-    = image_tag("paperboy_700.png", size: '300x300', class:"mb-4")
+    .box
+      = image_tag("paperboy_700.png", size: '300x300', class:"mb-4")
+    %br/
     %p delivered weekly by paperboy.digital
 
     %form{action: subscriptions_path, method: "POST"}
-      %input.form-control{name: "email", placeholder: 'your email', required: true, type: "text"}/
+      %input.form-control{name: "email", placeholder: 'e-mail address', required: true, type: "text"}/
       = hidden_field_tag :authenticity_token, form_authenticity_token
 
       = submit_tag 'subscribe', class: 'submit_button'
