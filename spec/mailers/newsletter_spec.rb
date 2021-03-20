@@ -16,8 +16,8 @@ RSpec.describe NewsletterMailer, type: :mailer do
 
       it do
         expect(mailer.from).to eq ['no-reply@showhn.paperboy.digital']
-        expect(mailer.subject).to include 'Welcome to'
-        expect(mailer.body.raw_source).to include 'Please confirm '
+        expect(mailer.subject).to include 'Please confirm'
+        expect(mailer.body.raw_source).to include subscription.confirm_token
       end
     end
   end
