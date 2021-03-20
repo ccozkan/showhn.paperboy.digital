@@ -1,9 +1,9 @@
+%h4 showhn.paperboy.digital
+%br/
 - @posts.each do |p|
- title:
- = p.title
+ = "#{p.title}, score: #{p.score}"
  %br
- url:
- = p.url
+ = "#{p.url}"
  %hr
 %br/
 %br/
