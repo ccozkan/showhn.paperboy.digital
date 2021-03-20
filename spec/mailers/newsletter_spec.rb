@@ -17,13 +17,14 @@ RSpec.describe NewsletterMailer, type: :mailer do
       it do
         expect(mailer.from).to eq ['no-reply@showhn.paperboy.digital']
         expect(mailer.subject).to include 'Welcome to'
-        expect(mailer.body.raw_source).to include ' enjoy '
+        expect(mailer.body.raw_source).to include 'Please confirm '
       end
     end
   end
 
   describe '#newsletter' do
     let(:post) { create(:hacker_news_post) }
+    let(:posts) { [post] }
 
     context 'enqueued job is added' do
       it do
@@ -32,12 +33,12 @@ RSpec.describe NewsletterMailer, type: :mailer do
     end
 
     context 'email is sent' do
-      subject(:mailer) { described_class.welcome(subscription) }
+      subject(:mailer) { described_class.newsletter(subscription, posts) }
 
       it do
         expect(mailer.from).to eq ['no-reply@showhn.paperboy.digital']
-        expect(mailer.subject).to include 'Welcome to'
-        expect(mailer.body.raw_source).to include ' enjoy '
+        expect(mailer.subject).to include 'Last Week'
+        expect(mailer.body.raw_source).to include post.url
       end
     end
   end

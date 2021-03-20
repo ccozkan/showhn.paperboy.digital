@@ -1,5 +1,8 @@
 %h2 welcome
-i hope you enjoy this!
+Please confirm your subscription by clicking the link below
+%br/
+= confirm_subscription_url(token: @subscription.confirm_token)
+%br/
+Also have a great week!
 %br/
 %br/
-= render 'partials/footer'
