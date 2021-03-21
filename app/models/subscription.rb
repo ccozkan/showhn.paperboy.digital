@@ -6,7 +6,7 @@ class Subscription < ApplicationRecord
   validates_uniqueness_of :email
   validates_format_of :email, with: URI::MailTo::EMAIL_REGEXP
 
-  after_commit :send_welcome_email, on: :create
+  after_create :send_welcome_email
 
   def self.confirmed_subscriptions
     where.not(confirmed_at: nil)
