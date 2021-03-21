@@ -6,12 +6,12 @@ RSpec.describe NewsletterMailer, type: :mailer do
   describe '#welcome' do
     context 'enqueued job is added' do
       it do
-        expect { subscription.send_welcome_email }.to have_enqueued_job(ActionMailer::MailDeliveryJob).with('NewsletterMailer', 'welcome', 'deliver_now', { args: [subscription] } )
+        expect { subscription.send_welcome_email }.to have_enqueued_job(ActionMailer::MailDeliveryJob).with('NewsletterMailer', 'welcome', 'deliver_now', { args: [subscription.id] } )
       end
     end
 
     context 'email is sent' do
-      subject(:mailer) { described_class.welcome(subscription) }
+      subject(:mailer) { described_class.welcome(subscription.id) }
 
       it do
         expect(mailer.from).to eq ['no-reply@showhn.paperboy.digital']
@@ -27,12 +27,12 @@ RSpec.describe NewsletterMailer, type: :mailer do
 
     context 'enqueued job is added' do
       it do
-        expect { subscription.send_newsletter_email(posts) }.to have_enqueued_job(ActionMailer::MailDeliveryJob).with('NewsletterMailer', 'newsletter', 'deliver_now', { args: [subscription, posts] })
+        expect { subscription.send_newsletter_email(posts) }.to have_enqueued_job(ActionMailer::MailDeliveryJob).with('NewsletterMailer', 'newsletter', 'deliver_now', { args: [subscription.id, posts] })
       end
     end
 
     context 'email is sent' do
-      subject(:mailer) { described_class.newsletter(subscription, posts) }
+      subject(:mailer) { described_class.newsletter(subscription.id, posts) }
 
       it do
         expect(mailer.from).to eq ['no-reply@showhn.paperboy.digital']

@@ -6,18 +6,18 @@ class Subscription < ApplicationRecord
   validates_uniqueness_of :email
   validates_format_of :email, with: URI::MailTo::EMAIL_REGEXP
 
-  after_create :send_welcome_email
+  after_commit :send_welcome_email, on: :create
 
   def self.confirmed_subscriptions
     where.not(confirmed_at: nil)
   end
 
   def send_newsletter_email(posts)
-    NewsletterMailer.newsletter(self, posts).deliver_later
+    NewsletterMailer.newsletter(self.id, posts).deliver_later
   end
 
   def send_welcome_email
-    NewsletterMailer.welcome(self).deliver_later
+    NewsletterMailer.welcome(self.id).deliver_later
   end
 
   def confirm!
