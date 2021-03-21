@@ -5,7 +5,7 @@
     .box
       = image_tag("paperboy_700.png", size: '300x300', class:"mb-4")
     %br/
-    %p delivered weekly by paperboy.digital
+    %p delivered weekly on wednesdays
 
     %form{action: subscriptions_path, method: "POST"}
       %input.form-control{name: "email", placeholder: 'e-mail address', required: true, type: "text"}/
