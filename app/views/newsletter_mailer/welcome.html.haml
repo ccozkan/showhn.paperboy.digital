@@ -1,7 +1,7 @@
 %h2 welcome
 Please confirm your subscription by clicking the link below
 %br/
-= link_to confirm_subscription_url(token: @subscription.confirm_token)
+= link_to 'confirm', confirm_subscription_url(token: @subscription.confirm_token)
 %br/
 Also have a great week!
 %br/
