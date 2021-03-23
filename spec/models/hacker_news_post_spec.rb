@@ -9,7 +9,7 @@ RSpec.describe HackerNewsPost, type: :model do
   describe '.score_ordered_posts_of_last_week' do
     let!(:most_popular_post) { create(:hacker_news_post, score: 100, posted_at: Date.today - 2.days) }
     let!(:less_popular_post) { create(:hacker_news_post, score: 10, posted_at: Date.today - 1.days) }
-    let!(:last_weeks_popular_post) { create(:hacker_news_post, score: 10, posted_at: Date.today.last_week - 1.day) }
+    let!(:last_weeks_popular_post) { create(:hacker_news_post, score: 10, posted_at: (Date.today - 7.days).beginning_of_day + 12.hours) }
 
     let!(:subject) { HackerNewsPost.score_ordered_posts_of_last_week}
 
