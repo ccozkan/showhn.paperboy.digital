@@ -1,5 +1,5 @@
 newsletter_sender_job:
-  cron: "0 12 * * WED"
+  cron: "30 12 * * WED"
   class: "NewsletterSenderWorker"
 
 post_receiver_job:
