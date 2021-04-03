@@ -14,6 +14,5 @@ RSpec.describe HackerNewsPost, type: :model do
     let!(:subject) { HackerNewsPost.score_ordered_posts_of_last_week}
 
     it { expect(subject).to eq [most_popular_post, less_popular_post] }
-    it { expect(subject.is_a? Array).to be true }
   end
 end
