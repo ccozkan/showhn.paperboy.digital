@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   resources :subscriptions, only: [:create]
+  resources :last_posts, only: [:index], path: 'last'
   get 'unsubscribe/:token', controller: 'unsubscriptions', action: 'show', as: 'unsubscription'
   get 'confirm/:token', controller: 'confirm_subscriptions', action: 'show', as: 'confirm_subscription'
 
