@@ -28,7 +28,7 @@ class HackerNewsPost < ApplicationRecord
   end
 
   def self.top20_posts_of_last_week
-    self.score_ordered_posts_of_last_issue.limit(20).to_a
+    self.score_ordered_posts_of_last_week.limit(20).to_a
   end
 
   def self.last_week_time_period

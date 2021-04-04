@@ -2,7 +2,7 @@ class NewsletterSenderWorker
   include Sidekiq::Worker
 
   def perform(*args)
-    posts = HackerNewsPost.score_ordered_posts_of_last_week
+    posts = HackerNewsPost.top20_posts_of_last_week
     subscriptions = Subscription.confirmed_subscriptions
 
     subscriptions.each do |sub|
