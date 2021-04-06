@@ -1,4 +1,5 @@
 # README
+[[https://travis-ci.org/ccozkan/showhn.paperboy.digital][https://travis-ci.org/ccozkan/showhn.paperboy.digital.svg?branch=master]]
 
 * showhn.paperboy.digital
 
