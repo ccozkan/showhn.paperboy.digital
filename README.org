@@ -1,5 +1,6 @@
 # README
 [[https://travis-ci.org/ccozkan/showhn.paperboy.digital][https://travis-ci.org/ccozkan/showhn.paperboy.digital.svg?branch=master]]
+[[https://codecov.io/gh/ccozkan/showhn.paperboy.digital/branch/master/graph/badge.svg?token=USHVVMDL62]]
 
 * showhn.paperboy.digital
 
