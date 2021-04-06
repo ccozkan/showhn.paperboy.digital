@@ -31,4 +31,6 @@ group :development do
   gem 'listen', '~> 3.3'
 end
 
+gem 'codecov', require: false, group: :test
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
