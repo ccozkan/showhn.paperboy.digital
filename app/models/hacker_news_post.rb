@@ -21,8 +21,9 @@ class HackerNewsPost < ApplicationRecord
   end
 
   def self.score_ordered_posts_of_last_week
-    starting_at = self.last_week_time_period[:starting_at]
-    ending_at = self.last_week_time_period[:ending_at]
+    last_week = self.last_week_time_period
+    starting_at = last_week[:starting_at]
+    ending_at = last_week[:ending_at]
 
     where('posted_at > ?', starting_at).where('posted_at <= ?', ending_at).order(score: :desc)
   end
