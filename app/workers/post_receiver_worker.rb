@@ -23,13 +23,13 @@ class PostReceiverWorker
       next if post_detail.nil?
 
       params = HackerNewsPost.format_post_detail(post_detail)
-      next if params[:posted_at] < HackerNewsPost.last_week_time_period[:starting_at]
+      next if params[:posted_at] < HackerNewsPost.this_week_time_period[:starting_at]
 
       post = HackerNewsPost.find_by(external_id: params[:external_id])
 
       if post.nil?
         HackerNewsPost.create(params)
-      elsif params[:posted_at] < HackerNewsPost.last_week_time_period[:ending_at]
+      elsif params[:posted_at] < HackerNewsPost.this_week_time_period[:ending_at]
         post.update(score: params[:score])
       end
     end
