@@ -41,7 +41,7 @@ class HackerNewsPost < ApplicationRecord
   end
 
   def self.last_week_time_period
-    starting_at = Date.today.prev_occurring(:wednesday).beginning_of_day - 7.days + 12.hours
+    starting_at = Date.tomorrow.prev_occurring(:wednesday).beginning_of_day - 7.days + 12.hours
     {
       starting_at: starting_at,
       ending_at: starting_at + 7.days
