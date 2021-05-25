@@ -13,13 +13,17 @@
 
       = submit_tag 'subscribe', class: 'submit_button'
 
+      %br
+
     %p.mt-5.mb-3.text-muted
+      = link_to 'last week\'s projects', last_posts_path
+      %br/
+      %br/
       = link_to 'source code', 'https://github.com/ccozkan/showhn.paperboy.digital'
       |
       = link_to 'hey@paperboy.digital', 'mailto:hey@paperboy.digital'
       |
       = link_to 'author', 'https://ozkan.cc'
-
-      %br/
+      %br
       © 2021
 
