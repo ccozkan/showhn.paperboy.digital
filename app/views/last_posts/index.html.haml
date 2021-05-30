@@ -1,15 +1,17 @@
 %h2 showhn.paperboy.digital/last
 
-%h3 top20
+%h4
+  = "<top_20>"
+
 - @posts.each_with_index do |p, index|
   - if index == 20
     %h4
       %a{name: "rest"}
-        end-of-top20
+        = "</top_20>"
     %hr
   = "#{index + 1}: #{p.title}, score: #{p.score}"
   %br/
-  = link_to p.url, p.url
+  = link_to p.url, p.url, target: :_blank
   %br/
   %br/
   %hr
