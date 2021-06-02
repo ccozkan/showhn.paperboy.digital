@@ -10,6 +10,9 @@
         = "</top_20>"
     %hr
   = "#{index + 1}: #{p.title}, score: #{p.score}"
+  |
+  = link_to 'comments', "https://news.ycombinator.com/item?id=#{p.external_id}", target: :_blank
+  %br/
   %br/
   = link_to p.url, p.url, target: :_blank
   %br/
