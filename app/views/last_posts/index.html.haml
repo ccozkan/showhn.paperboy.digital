@@ -1,11 +1,14 @@
 %h2 showhn.paperboy.digital/last
 
 %h4
+  = "#{HackerNewsPost.last_week_time_period[:starting_at].to_s(:short)} -- #{HackerNewsPost.last_week_time_period[:ending_at].to_s(:short)}"
+
+%h3
   = "<top_20>"
 
 - @posts.each_with_index do |p, index|
   - if index == 20
-    %h4
+    %h3
       %a{name: "rest"}
         = "</top_20>"
     %hr
