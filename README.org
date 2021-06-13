@@ -16,7 +16,7 @@ This web-app sends weekly newsletter of projects on [[https://news.ycombinator.c
    + postgresql and redis for databases 📚
    + rspec for testing 🤖
    + aws ses, for smtp server 📬
-   + haml and tacit classless cssfor views 👀
+   + haml and tacit classless css for views 👀
    + runs on dokku 🐳
    + deployed on digitalocean 🌊 
    + uses honeybadger for error monitoring 🕵
