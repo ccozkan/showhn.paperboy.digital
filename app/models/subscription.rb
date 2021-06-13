@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: subscriptions
+#
+#  id            :bigint           not null, primary key
+#  email         :string
+#  unsub_token   :string
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  confirm_token :string
+#  confirmed_at  :datetime
+#
 class Subscription < ApplicationRecord
   has_secure_token :unsub_token
   has_secure_token :confirm_token

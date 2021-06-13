@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: hacker_news_posts
+#
+#  id          :bigint           not null, primary key
+#  external_id :string
+#  url         :string
+#  title       :string
+#  posted_at   :datetime
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  score       :integer
+#
 class HackerNewsPost < ApplicationRecord
   validates_presence_of :external_id
   validates_uniqueness_of :external_id
