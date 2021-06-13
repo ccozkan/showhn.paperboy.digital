@@ -30,6 +30,7 @@ end
 
 group :development do
   gem 'listen', '~> 3.3'
+  gem 'annotate'
 end
 
 gem 'codecov', require: false, group: :test
