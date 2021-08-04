@@ -1,21 +1,17 @@
-%h4 Show HN Projecsts of Last Week
+%h4 Show HN Projects of Last Week
 
-This newsletter is b.t.y.b.
-= link_to 'showhn.paperboy.digital', root_url
-
-%br/
-%hr
 %br/
 
 - @posts.each do |p|
  = "#{p.title}, score: #{p.score}"
  %br
- = link_to "p.url", "p.url"
+ = link_to "#{p.url}", "#{p.url}"
  %hr
 
-Click
-= link_to 'here', last_posts_url(anchor: 'rest')
-to see the rest of the projects
+= link_to 'Rest of the Projects', last_posts_url(anchor: 'rest')
 
+%br/
 %hr
+%hr
+
 = render 'partials/footer'
