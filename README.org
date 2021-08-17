@@ -21,6 +21,7 @@ This web-app sends weekly newsletter of projects on [[https://news.ycombinator.c
    + deployed on digitalocean 🌊 
    + uses honeybadger for error monitoring 🕵
    + sidekiq for background jobs ⏰
+   + github actions for ci, and cd to dokku ⚙
 
 ** development
 *** installation
