@@ -83,7 +83,7 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
-    ffi (1.15.1)
+    ffi (1.15.3)
     fugit (1.4.5)
       et-orbi (~> 1.1, >= 1.1.8)
       raabro (~> 1.4)
@@ -109,7 +109,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
-    listen (3.5.1)
+    listen (3.6.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.9.1)
@@ -276,7 +276,7 @@ DEPENDENCIES
   haml-rails
   honeybadger (~> 4.0)
   httparty
-  listen (~> 3.3)
+  listen (~> 3.6)
   pg (~> 1.1)
   pry
   pry-doc
