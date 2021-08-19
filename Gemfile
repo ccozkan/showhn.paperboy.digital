@@ -21,7 +21,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'spring-commands-rspec'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails', '~> 4.0.2'
+  gem 'rspec-rails', '~> 5.0.2'
   gem 'shoulda-matchers', '~> 5.0'
   gem 'factory_bot'
   gem 'factory_bot_rails'
