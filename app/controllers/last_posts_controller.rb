@@ -1,7 +1,7 @@
 class LastPostsController < ApplicationController
   before_action :find_posts, only: [:index]
 
-  def index;end
+  def index; end
 
   private
 

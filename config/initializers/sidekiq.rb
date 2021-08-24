@@ -1,4 +1,4 @@
-Sidekiq.configure_server do |config|
+Sidekiq.configure_server do |_config|
   schedule_file = "config/schedule.yml"
 
   if File.exist?(schedule_file)

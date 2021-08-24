@@ -1,11 +1,11 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe RequestMakerService, type: :service do
-  describe '#call' do
-    let(:url) { 'https://ozkan.cc' }
+  describe "#call" do
+    let(:url) { "https://ozkan.cc" }
     let(:response) { RequestMakerService.new(url).call }
 
-    context 'when success' do
+    context "when success" do
       it do
         expect(response.success?).to eq true
         expect(response.payload).not_to eq nil
@@ -13,8 +13,8 @@ RSpec.describe RequestMakerService, type: :service do
       end
     end
 
-    context 'when not success' do
-      context 'HTTPartyError' do
+    context "when not success" do
+      context "HTTPartyError" do
         before do
           allow(HTTParty).to receive(:get).and_raise(HTTParty::Error)
         end
@@ -26,7 +26,7 @@ RSpec.describe RequestMakerService, type: :service do
         end
       end
 
-      context 'HTTPartyError' do
+      context "HTTPartyError" do
         before do
           allow(HTTParty).to receive(:get).and_raise(SocketError)
         end

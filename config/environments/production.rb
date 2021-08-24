@@ -22,7 +22,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
@@ -45,11 +45,10 @@ Rails.application.configure do
   config.log_level = :info
 
   # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.log_tags = [:request_id]
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
-
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -105,16 +104,16 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = {
-    host: 'showhn.paperboy.digital',
-    protocol: 'https'
+    host: "showhn.paperboy.digital",
+    protocol: "https",
   }
 
   config.action_mailer.smtp_settings = {
-    address: ENV['AWS_SES_SERVER'],
+    address: ENV["AWS_SES_SERVER"],
     port: 587,
-    user_name: ENV['AWS_SES_USERNAME'],
-    password: ENV['AWS_SES_PASSWORD'],
+    user_name: ENV["AWS_SES_USERNAME"],
+    password: ENV["AWS_SES_PASSWORD"],
     authentication: :login,
-    enable_starttls_auto: true
+    enable_starttls_auto: true,
   }
 end

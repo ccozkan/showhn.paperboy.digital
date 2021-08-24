@@ -1,5 +1,5 @@
 class RequestMakerService
-  require 'httparty'
+  require "httparty"
 
   def initialize(url)
     @url = url

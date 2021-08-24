@@ -25,11 +25,11 @@ class Subscription < ApplicationRecord
   end
 
   def send_newsletter_email(posts)
-    NewsletterMailer.newsletter(self.id, posts).deliver_later
+    NewsletterMailer.newsletter(id, posts).deliver_later
   end
 
   def send_welcome_email
-    NewsletterMailer.welcome(self.id).deliver_later
+    NewsletterMailer.welcome(id).deliver_later
   end
 
   def confirm!
@@ -37,6 +37,6 @@ class Subscription < ApplicationRecord
   end
 
   def confirmed?
-    !!(confirmed_at)
+    !!confirmed_at
   end
 end

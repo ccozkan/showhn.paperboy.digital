@@ -2,7 +2,7 @@ class SubscriptionsController < ApplicationController
   def create
     @subscription = Subscription.new(subscription_params)
     if @subscription.save
-      redirect_to root_path, notice: 'Please check your inbox(sometimes unfortunately spam) for confirmation mail :^)'
+      redirect_to root_path, notice: "Please check your inbox(sometimes unfortunately spam) for confirmation mail :^)"
     else
       redirect_to root_path, alert: @subscription.errors.full_messages.first
     end

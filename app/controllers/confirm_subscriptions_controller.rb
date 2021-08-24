@@ -6,12 +6,12 @@ class ConfirmSubscriptionsController < ApplicationController
       redirect_to root_path
       return
     elsif @subscription.confirmed?
-      render plain: 'Your subscription is already confirmed'
+      render plain: "Your subscription is already confirmed"
       return
     end
 
     @subscription.confirm!
-    render plain: 'Your subscription is now confirmed, see you on wednesday!'
+    render plain: "Your subscription is now confirmed, see you on wednesday!"
   end
 
   private

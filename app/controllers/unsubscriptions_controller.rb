@@ -7,7 +7,7 @@ class UnsubscriptionsController < ApplicationController
       return
     end
     @subscription.destroy
-    render plain: 'Successfully unsubscribed, take care!'
+    render plain: "Successfully unsubscribed, take care!"
   end
 
   private
