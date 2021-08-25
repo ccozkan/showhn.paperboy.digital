@@ -9,6 +9,7 @@ AllCops:
     - config/**/* # TODO: fix these
     - db/migrate/* # TODO: fix these
     - bin/*
+    - vendor/**/*
 
 require:
   - rubocop-rails
