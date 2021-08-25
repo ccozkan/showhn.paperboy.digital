@@ -1,6 +1,5 @@
-name: 'deploy'
+name: Deploy
 
-# yamllint disable-line rule:truthy
 on:
   push:
     branches:
@@ -10,12 +9,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Cloning repo
+      - name: cloning repo
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
-      - name: Push to dokku
+      - name: push to dokku
         uses: dokku/github-action@master
         with:
           git_push_flags: '--force'

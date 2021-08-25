@@ -1,16 +1,18 @@
-name: ShowHN Paperboy Digital tests
+name: Pre-Deploy Checks
+
 on: [push, pull_request]
+
 jobs:
-  test:
+  pre-deploy-checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Ruby
+      - name: set up ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7.4
           bundler-cache: true
-      - name: Run rubocop
+      - name: run rubocop
         run: bundle exec rubocop
-      - name: Run tests
+      - name: run tests
         run: bundle exec rake test
