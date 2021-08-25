@@ -4,7 +4,7 @@ RSpec.describe "Unsubscriptions", type: :request do
   describe "unsubscribing user" do
     context "when subscription exists" do
       let(:subscription) { create(:subscription) }
-      before { get "/unsubscribe/" + subscription.unsub_token }
+      before { get "/unsubscribe/#{subscription.unsub_token}" }
 
       it do
         expect(response).to have_http_status(:success)
@@ -13,7 +13,7 @@ RSpec.describe "Unsubscriptions", type: :request do
     end
 
     context "when subscription does not exist" do
-      before { get "/unsubscribe/" + "invalid_token" }
+      before { get "/unsubscribe/invalid_token" }
 
       it "get redirected" do
         expect(response).to have_http_status(:redirect)

@@ -4,7 +4,7 @@ RSpec.describe "ConfirmSubscriptions", type: :request do
   let(:subscription) { create(:subscription, confirmed_at: nil) }
 
   describe "successfull subscription confirmation" do
-    before { get "/confirm/" + subscription.confirm_token }
+    before { get "/confirm/#{subscription.confirm_token}" }
 
     it do
       expect(response).to have_http_status(:success)
@@ -13,7 +13,7 @@ RSpec.describe "ConfirmSubscriptions", type: :request do
   end
 
   describe "invalid confirmation link" do
-    before { get "/confirm/" + "invalid_token" }
+    before { get "/confirm/invalid_token" }
 
     it "get redirected" do
       expect(response).to have_http_status(:redirect)
@@ -25,7 +25,7 @@ RSpec.describe "ConfirmSubscriptions", type: :request do
   describe "already confirmed" do
     before do
       subscription.confirm!
-      get "/confirm/" + subscription.confirm_token
+      get "/confirm/#{subscription.confirm_token}"
     end
 
     it do
