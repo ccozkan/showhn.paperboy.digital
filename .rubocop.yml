@@ -5,11 +5,11 @@ AllCops:
   Exclude:
     - db/schema.rb
     - app/workers/* # TODO: fix these
-    - spec/**/* # TODO: fix these
     - config/**/* # TODO: fix these
     - db/migrate/* # TODO: fix these
     - bin/*
     - vendor/**/*
+    - spec/*.rb
 
 require:
   - rubocop-rails
