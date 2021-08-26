@@ -22,7 +22,7 @@ This web-app sends weekly newsletter of projects on [[https://news.ycombinator.c
    + uses honeybadger for error monitoring 🕵
    + sidekiq for background jobs ⏰
    + github actions for ci, and cd to dokku ⚙
-   + rubocop as a linter 🪡
+   + rubocop as linter 🧵
 
 ** development
 *** installation
