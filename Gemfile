@@ -5,12 +5,12 @@ ruby "2.7.4"
 
 gem "haml"
 gem "haml-rails"
-gem "honeybadger", "~> 4.0"
+gem "honeybadger"
 gem "httparty", require: false
-gem "pg", "~> 1.1"
-gem "puma", "~> 5.0"
-gem "rails", "~> 6.1.4"
-gem "sass-rails", ">= 6"
+gem "pg"
+gem "puma"
+gem "rails", github: "rails/rails", branch: "main"
+gem "sass-rails"
 gem "sidekiq"
 gem "sidekiq-cron"
 
@@ -21,18 +21,18 @@ group :development, :test do
   gem "pry"
   gem "pry-doc"
   gem "pry-rails"
-  gem "rspec-rails", "~> 5.0.2"
+  gem "rspec-rails"
   gem "rubocop"
   gem "rubocop-performance"
   gem "rubocop-rails"
-  gem "shoulda-matchers", "~> 5.0"
+  gem "shoulda-matchers"
   gem "spring-commands-rspec"
   gem "timecop"
 end
 
 group :development do
   gem "annotate"
-  gem "listen", "~> 3.7"
+  gem "listen"
 end
 
 gem "codecov", require: false, group: :test
