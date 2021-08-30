@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 4eeca2af40c0853a9909414d6db3c44780d021f7
+  revision: d0b0c1caa6b824e975f2fe2811f266f1a8f16d15
   branch: main
   specs:
     actioncable (7.0.0.alpha)
@@ -154,7 +154,7 @@ GEM
     minitest (5.14.4)
     multi_xml (0.6.0)
     nio4r (2.5.8)
-    nokogiri (1.12.3)
+    nokogiri (1.12.4)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     parallel (1.20.1)
