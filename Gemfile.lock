@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: a44fbb5dcacd3281116f7d9881a25e8f08f729a4
+  revision: 78e402077d4d69b08db7daf8944a32eef0cf6ac4
   branch: main
   specs:
     actioncable (7.0.0.alpha)
@@ -61,7 +61,6 @@ GIT
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-      zeitwerk (~> 2.5.0.beta3)
     rails (7.0.0.alpha)
       actioncable (= 7.0.0.alpha)
       actionmailbox (= 7.0.0.alpha)
@@ -83,6 +82,7 @@ GIT
       method_source
       rake (>= 0.13)
       thor (~> 1.0)
+      zeitwerk (~> 2.5.0.beta3)
 
 GEM
   remote: https://rubygems.org/
