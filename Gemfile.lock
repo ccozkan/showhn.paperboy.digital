@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 720f6b1ec21fb112522e664f86dfc28c5edbaefa
+  revision: bc590ffa70da31c60087a78e372872c2ada22374
   branch: main
   specs:
     actioncable (7.0.0.alpha2)
@@ -75,7 +75,6 @@ GIT
       activesupport (= 7.0.0.alpha2)
       bundler (>= 1.15.0)
       railties (= 7.0.0.alpha2)
-      sprockets-rails (>= 2.0.0)
     railties (7.0.0.alpha2)
       actionpack (= 7.0.0.alpha2)
       activesupport (= 7.0.0.alpha2)
@@ -149,7 +148,7 @@ GEM
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2021.0901)
-    mini_mime (1.1.1)
+    mini_mime (1.1.2)
     mini_portile2 (2.6.1)
     minitest (5.14.4)
     multi_xml (0.6.0)
