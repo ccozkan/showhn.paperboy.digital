@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: dcae1281b7c6de92da879909e4bc3c4b08a3fa86
+  revision: 31ad3f152954142c68c030db596c35e31ca93a76
   branch: main
   specs:
     actioncable (7.0.0.alpha2)
@@ -81,7 +81,7 @@ GIT
       method_source
       rake (>= 12.2)
       thor (~> 1.0)
-      zeitwerk (~> 2.5.0.beta6)
+      zeitwerk (~> 2.5)
 
 GEM
   remote: https://rubygems.org/
@@ -171,7 +171,7 @@ GEM
     puma (5.5.2)
       nio4r (~> 2.0)
     raabro (1.4.0)
-    racc (1.5.2)
+    racc (1.6.0)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -273,7 +273,7 @@ GEM
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     yard (0.9.26)
-    zeitwerk (2.5.0.beta6)
+    zeitwerk (2.5.1)
 
 PLATFORMS
   ruby
