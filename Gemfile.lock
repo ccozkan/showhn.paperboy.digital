@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: f314bae561f7d1d8ff7606ee417fcf0bc55d5ab0
+  revision: 25418676cd36d5b4f87a55178f53b80f2fdcf900
   branch: main
   specs:
     actioncable (7.0.0.alpha2)
@@ -133,7 +133,7 @@ GEM
     httparty (0.20.0)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
-    i18n (1.8.10)
+    i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
