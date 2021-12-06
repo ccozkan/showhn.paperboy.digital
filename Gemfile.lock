@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 3b01e92d5291157bbc8486f0d6d335c891cd8eed
+  revision: 5aeb7d1c4013cbf75aedcb9ea153f2fddcae6219
   branch: main
   specs:
     actioncable (7.0.0.alpha2)
@@ -34,6 +34,7 @@ GIT
       activerecord (= 7.0.0.alpha2)
       activestorage (= 7.0.0.alpha2)
       activesupport (= 7.0.0.alpha2)
+      globalid (>= 0.6.0)
       nokogiri (>= 1.8.5)
     actionview (7.0.0.alpha2)
       activesupport (= 7.0.0.alpha2)
@@ -113,7 +114,7 @@ GEM
     fugit (1.5.1)
       et-orbi (~> 1.1, >= 1.1.8)
       raabro (~> 1.4)
-    globalid (0.5.2)
+    globalid (1.0.0)
       activesupport (>= 5.0)
     haml (5.2.2)
       temple (>= 0.8.0)
