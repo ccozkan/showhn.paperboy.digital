@@ -150,7 +150,7 @@ GEM
     mime-types-data (3.2021.0901)
     mini_mime (1.1.2)
     mini_portile2 (2.6.1)
-    minitest (5.14.4)
+    minitest (5.15.0)
     multi_xml (0.6.0)
     nio4r (2.5.8)
     nokogiri (1.12.5)
@@ -237,7 +237,7 @@ GEM
       sprockets-rails
       tilt
     sexp_processor (4.15.3)
-    shoulda-matchers (5.0.0)
+    shoulda-matchers (5.1.0)
       activesupport (>= 5.2.0)
     sidekiq (6.2.2)
       connection_pool (>= 2.2.2)
