@@ -86,8 +86,8 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    annotate (3.1.1)
-      activerecord (>= 3.2, < 7.0)
+    annotate (3.2.0)
+      activerecord (>= 3.2, < 8.0)
       rake (>= 10.4, < 14.0)
     ast (2.4.2)
     builder (3.2.4)
@@ -133,7 +133,7 @@ GEM
     httparty (0.20.0)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
-    i18n (1.9.1)
+    i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -265,7 +265,7 @@ GEM
     temple (0.8.2)
     thor (1.2.1)
     tilt (2.0.10)
-    timecop (0.9.4)
+    timecop (0.9.5)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
