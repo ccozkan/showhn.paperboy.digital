@@ -6,22 +6,22 @@ module Rack
       health_status = check_health_status
 
       [
-        health_status == 'OK' ? 200 : 503,
-        { 'Content-Type' => 'plain/text' },
-        [health_status]
+        health_status == "OK" ? 200 : 503,
+        { "Content-Type" => "plain/text" },
+        [health_status],
       ]
     end
 
     private
 
     def database_connected?
-      ApplicationRecord.connection.select_value('SELECT 1') == 1
+      ApplicationRecord.connection.select_value("SELECT 1") == 1
     rescue StandardError
       false
     end
 
     def redis_connected?
-      Redis.new.ping == 'PONG'
+      Redis.new.ping == "PONG"
     rescue StandardError
       false
     end
@@ -31,9 +31,9 @@ module Rack
       @redis_connection_status = redis_connected?
 
       if @database_connection_status && @redis_connection_status
-        'OK'
+        "OK"
       else
-        'KO'
+        "KO"
       end
     end
   end
