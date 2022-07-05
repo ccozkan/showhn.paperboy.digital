@@ -2,4 +2,4 @@
 
 WAIT=10  
 ATTEMPTS=7  
-/check.txt it_works
+/health_check OK
