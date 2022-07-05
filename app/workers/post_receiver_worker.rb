@@ -15,7 +15,7 @@ class PostReceiverWorker
       post_detail = RequestMakerService.new(api_url).call
 
       unless post_detail.success?
-        Honeybadger.notify(post_details.errors)
+        Honeybadger.notify(post_detail.errors)
         next
       end
 
