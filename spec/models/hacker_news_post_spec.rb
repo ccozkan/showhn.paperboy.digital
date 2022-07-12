@@ -9,7 +9,7 @@ RSpec.describe HackerNewsPost, type: :model do
   describe do
     let(:starting_at) { Date.today - 7.days }
     let(:ending_at) { starting_at + 7.days }
-    let!(:stubbed_last_week_time_period) { { starting_at: starting_at, ending_at: ending_at } }
+    let!(:stubbed_last_week_time_period) { { starting_at:, ending_at: } }
 
     before do
       allow(HackerNewsPost).to receive(:last_week_time_period).and_return(stubbed_last_week_time_period)

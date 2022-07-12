@@ -30,7 +30,7 @@ class HackerNewsPost < ApplicationRecord
     url = post_detail["url"] || "https://news.ycombinator.com/item?id=#{external_id}"
     posted_at = DateTime.strptime(post_detail["time"].to_s, "%s")
 
-    { url: url, score: score, title: title, posted_at: posted_at, external_id: external_id }
+    { url:, score:, title:, posted_at:, external_id: }
   end
 
   def self.score_ordered_posts_of_last_week
@@ -56,7 +56,7 @@ class HackerNewsPost < ApplicationRecord
   def self.last_week_time_period
     starting_at = Date.tomorrow.prev_occurring(:wednesday).beginning_of_day - 7.days + 12.hours
     {
-      starting_at: starting_at,
+      starting_at:,
       ending_at: starting_at + 7.days,
     }
   end
