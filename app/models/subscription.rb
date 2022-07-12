@@ -32,6 +32,10 @@ class Subscription < ApplicationRecord
     NewsletterMailer.welcome(id).deliver_later
   end
 
+  def send_announcement_email(announcement)
+    AnnouncementMailer.announcement(id, announcement.formatted).deliver_later
+  end
+
   def confirm!
     update!(confirmed_at: Time.current.utc)
   end
