@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 19f9922523f723a3843f1d6f42327731cf787b13
+  revision: 8d9d8013caa88efa2514aa741eeaf673c7520415
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -143,7 +143,7 @@ GEM
     httparty (0.20.0)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
-    i18n (1.10.0)
+    i18n (1.11.0)
       concurrent-ruby (~> 1.0)
     json (2.6.2)
     listen (3.7.1)
@@ -178,7 +178,7 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.6)
+    nokogiri (1.13.7)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     parallel (1.22.1)
