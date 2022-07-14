@@ -1,5 +1,5 @@
 class LastPostsController < ApplicationController
-  before_action :find_posts
+  before_action :find_posts, only: %i[index feed]
 
   def index; end
 
@@ -8,6 +8,6 @@ class LastPostsController < ApplicationController
   private
 
   def find_posts
-    @posts = HackerNewsPost.all
+    @posts = HackerNewsPost.score_ordered_posts_of_last_week
   end
 end
