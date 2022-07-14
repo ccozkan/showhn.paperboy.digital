@@ -33,7 +33,7 @@ class Subscription < ApplicationRecord
   end
 
   def send_announcement_email(announcement)
-    AnnouncementMailer.announcement(id, announcement.formatted).deliver_later
+    AnnouncementMailer.announcement(id, announcement).deliver_later
   end
 
   def confirm!

@@ -2,11 +2,11 @@ class AnnouncementSenderWorker
   include Sidekiq::Worker
 
   def perform(*args)
-    posts = HackerNewsPost.top20_posts_of_last_week
     subscriptions = Subscription.confirmed_subscriptions
+    announcement = args.first
 
     subscriptions.each do |sub|
-      sub.send_newsletter_email(posts)
+      sub.send_announcement_email(announcement)
     end
   end
 end
