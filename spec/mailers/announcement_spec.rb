@@ -2,10 +2,9 @@ require "rails_helper"
 
 RSpec.describe AnnouncementMailer, type: :mailer do
   let(:subscription) { create(:subscription) }
+  let(:announcement) { Announcement.new(subject: 'hello everybody', body: 'here is a cool update').formatted }
 
-  describe "#newsletter" do
-    let(:announcement) { Announcement.new(subject: 'hello everybody', body: 'here is a cool update').formatted }
-
+  describe "#announcement" do
     context "enqueued job is added" do
       it do
         expect { subscription.send_announcement_email(announcement) }.to have_enqueued_job(ActionMailer::MailDeliveryJob).with("AnnouncementMailer", "announcement", "deliver_now", { args: [subscription.id, announcement] })
