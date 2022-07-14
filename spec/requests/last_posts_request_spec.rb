@@ -1,7 +1,6 @@
 require "rails_helper"
 
 RSpec.describe "LastPosts", type: :request do
-
   describe "#index" do
     before { get "/last" }
 
