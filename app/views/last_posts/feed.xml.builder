@@ -11,6 +11,6 @@ xml.rss version: "2.0" do
       xml.pubDate HackerNewsPost.last_week_time_period[:ending_at].to_s(:rfc822)
       xml.guid HackerNewsPost.last_week_time_period[:ending_at].to_i.to_s
       xml.link "https://showhn.paperboy.digital/last"
-      end
+    end
   end
 end
