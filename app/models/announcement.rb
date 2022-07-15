@@ -5,6 +5,6 @@ class Announcement
   end
 
   def formatted
-    { 'subject': @subject, 'body': @body}.to_json
+    { 'subject': @subject, 'body': @body }.to_json
   end
 end
