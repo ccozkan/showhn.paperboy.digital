@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 6b042adb87701ad46c8d9f7cb681aa335f08349c
+  revision: 887dc9af6cc4de9761817b8e3d2228a5a1af9802
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -110,7 +110,7 @@ GEM
     diff-lcs (1.5.0)
     digest (3.1.0)
     docile (1.4.0)
-    erubi (1.10.0)
+    erubi (1.11.0)
     erubis (2.7.0)
     et-orbi (1.2.7)
       tzinfo
