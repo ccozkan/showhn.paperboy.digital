@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 6b042adb87701ad46c8d9f7cb681aa335f08349c
+  revision: a0c1d33d2f934ebe050b8dd69336200cbca2ae3e
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -46,7 +46,7 @@ GIT
     actionview (7.1.0.alpha)
       activesupport (= 7.1.0.alpha)
       builder (~> 3.1)
-      erubi (~> 1.4)
+      erubi (~> 1.11)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
     activejob (7.1.0.alpha)
@@ -110,7 +110,7 @@ GEM
     diff-lcs (1.5.0)
     digest (3.1.0)
     docile (1.4.0)
-    erubi (1.10.0)
+    erubi (1.11.0)
     erubis (2.7.0)
     et-orbi (1.2.7)
       tzinfo
