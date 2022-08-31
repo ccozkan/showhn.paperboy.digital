@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 9b6abb50b2c99fe4c5b1249367f790d30fc1e64d
+  revision: dbc7785f6d09d2202f6713acbfb3e714983d1cb5
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -87,7 +87,6 @@ GIT
     railties (7.1.0.alpha)
       actionpack (= 7.1.0.alpha)
       activesupport (= 7.1.0.alpha)
-      method_source
       rake (>= 12.2)
       thor (~> 1.0)
       zeitwerk (~> 2.6)
