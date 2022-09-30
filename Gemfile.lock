@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 859af30e3bd093987614e40231b5c5d631b132c8
+  revision: a4eeb2bcd40bb6f2f964cc2abc95d3f2d5920244
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -108,7 +108,6 @@ GEM
     connection_pool (2.3.0)
     crass (1.0.6)
     diff-lcs (1.5.0)
-    digest (3.1.0)
     docile (1.4.0)
     erubi (1.11.0)
     erubis (2.7.0)
@@ -163,20 +162,14 @@ GEM
     mini_portile2 (2.8.0)
     minitest (5.16.3)
     multi_xml (0.6.0)
-    net-imap (0.2.3)
-      digest
+    net-imap (0.3.1)
       net-protocol
-      strscan
-    net-pop (0.1.1)
-      digest
+    net-pop (0.1.2)
       net-protocol
-      timeout
     net-protocol (0.1.3)
       timeout
-    net-smtp (0.3.1)
-      digest
+    net-smtp (0.3.2)
       net-protocol
-      timeout
     nio4r (2.5.8)
     nokogiri (1.13.8)
       mini_portile2 (~> 2.8.0)
@@ -288,7 +281,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    strscan (3.0.4)
     temple (0.8.2)
     thor (1.2.1)
     tilt (2.0.10)
