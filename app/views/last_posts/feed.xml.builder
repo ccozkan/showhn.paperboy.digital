@@ -5,7 +5,7 @@ xml.rss version: "2.0" do
     xml.description "weekly newsletter for 'show HackerNews'"
     xml.link last_posts_url
 
-    @posts.each_with_index do |post, index| 
+    @posts.each_with_index do |post, index|
       xml.item do
         xml.title "#{index}) showhn.paperboy.digital"
         xml.description post.title
