@@ -3,7 +3,7 @@ xml.rss version: "2.0" do
   xml.channel do
     xml.title "ShowHN Paperboy Digital"
     xml.description "weekly newsletter for 'show HackerNews'"
-    xml.link last_posts_url
+    xml.link root_url
 
     @posts.each_with_index do |post, index|
       xml.item do
