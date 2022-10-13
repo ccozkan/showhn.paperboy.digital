@@ -7,7 +7,7 @@ xml.rss version: "2.0" do
 
     @posts.each_with_index do |post, index|
       xml.item do
-        xml.title "#{index}) showhn.paperboy.digital"
+        xml.title "#{index + 1}) showhn.paperboy.digital, score: #{post.score}"
         xml.description post.title
         xml.link post.url
 
