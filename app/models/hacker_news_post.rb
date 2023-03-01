@@ -38,7 +38,18 @@ class HackerNewsPost < ApplicationRecord
     starting_at = last_week[:starting_at]
     ending_at = last_week[:ending_at]
 
-    where("posted_at > ?", starting_at).where("posted_at <= ?", ending_at).order(score: :desc)
+    if Rails.env.production?
+      cache_expires_at = this_week_time_period[:ending_at]
+      posts_ids = Rails.cache.fetch(:score_ordered_posts_of_last_week, expires_at: cache_expires_at) do
+        where("posted_at > ?", starting_at).
+          where("posted_at <= ?", ending_at).
+          order(score: :desc).
+          pluck(:id)
+      end
+      find(posts_ids)
+    else
+      where("posted_at > ?", starting_at).where("posted_at <= ?", ending_at).order(score: :desc)
+    end
   end
 
   def self.top20_posts_of_last_week
