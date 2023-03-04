@@ -11,7 +11,7 @@ gem "pg"
 gem "puma"
 gem "rails", github: "rails/rails", branch: "main"
 gem "sass-rails"
-gem "sidekiq"
+gem "sidekiq", '<7'
 gem "sidekiq-cron"
 
 group :development, :test do

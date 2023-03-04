@@ -314,7 +314,7 @@ DEPENDENCIES
   rubocop-rails
   sass-rails
   shoulda-matchers
-  sidekiq
+  sidekiq (< 7)
   sidekiq-cron
   spring-commands-rspec
   timecop
