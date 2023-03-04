@@ -48,7 +48,8 @@ class HackerNewsPost < ApplicationRecord
       end
       find(posts_ids)
     else
-      where("posted_at > ?", starting_at).where("posted_at <= ?", ending_at).order(score: :desc) || HackerNewsPost.last(42)
+      posts = where("posted_at > ?", starting_at).where("posted_at <= ?", ending_at).order(score: :desc)
+      posts.empty? ? HackerNewsPost.last(42) : posts
     end
   end
 
