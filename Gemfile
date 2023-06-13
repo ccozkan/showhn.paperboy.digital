@@ -11,8 +11,8 @@ gem "pg"
 gem "puma"
 gem "rails", github: "rails/rails", branch: "main"
 gem "sass-rails"
-gem "sidekiq", "<7"
-gem "sidekiq-cron"
+gem "sidekiq", "<8"
+gem "sidekiq-cron", "~> 1.9"
 
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
