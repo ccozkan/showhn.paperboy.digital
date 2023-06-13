@@ -21,7 +21,7 @@ module Rack
     end
 
     def redis_connected?
-      true # FIXME
+      Redis.new.ping == "PONG"
     rescue StandardError
       false
     end
