@@ -39,3 +39,5 @@ end
 gem "codecov", require: false, group: :test
 
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
+
+gem "sidekiq-failures", "~> 1.0"
