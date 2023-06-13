@@ -10,6 +10,7 @@ gem "httparty", require: false
 gem "pg"
 gem "puma"
 gem "rails", github: "rails/rails", branch: "main"
+gem "redis"
 gem "sass-rails"
 gem "sidekiq", "<8"
 gem "sidekiq-cron", "~> 1.9"

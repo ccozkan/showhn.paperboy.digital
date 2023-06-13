@@ -197,6 +197,8 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redis (5.0.6)
+      redis-client (>= 0.9.0)
     redis-client (0.14.1)
       connection_pool
     regexp_parser (2.7.0)
@@ -310,6 +312,7 @@ DEPENDENCIES
   pry-rails
   puma
   rails!
+  redis
   rspec-rails
   rubocop
   rubocop-performance
