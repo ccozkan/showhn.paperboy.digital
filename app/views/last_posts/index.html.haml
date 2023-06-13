@@ -1,4 +1,5 @@
 %h2 showhn.paperboy.digital/last
+= link_to 'homepage <<', root_path
 
 %h4
   = "#{HackerNewsPost.last_week_time_period[:starting_at].to_s(:short)} -- #{HackerNewsPost.last_week_time_period[:ending_at].to_s(:short)}"
